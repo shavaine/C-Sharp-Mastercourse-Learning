@@ -5,22 +5,8 @@
  * At the end, print out the guest list and the total number of guest.
  */
 
-Dictionary<string, int> guestList = new Dictionary<string, int>();
-bool running = true;
-
-do
-{
-    Console.WriteLine("Welcome to the Party!");
-
-    // Gets the name and amount of people in guest's party
-    (string name, int people) = Party.GetNameAndAmount();
-
-    // Added the guest and people amount to Guest List
-    guestList.Add(name, people);
-
-    // Asks if there are anymore Guest and exit loop if there aren't any
-    running = Party.CheckForGuest();
-
-} while (running);
+Console.WriteLine("Welcome to the Party!");
+ 
+var guestList = Party.GetTotalGuests();
 
 Party.PrintGuestList(guestList);

@@ -3,15 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace MiniProjectGuestList
 {
     public static class Party
     {
-        public static (string name, int people) GetNameAndAmount()
+        public static string GetPartyName()
         {
-            Console.Write("What is your name: ");
+            Console.Write("What is your party's name: ");
             string name = Console.ReadLine();
+
+            return name;
+        }
+
+        public static int GetTotalPeople()
+        {
             bool validPeople = false;
             int people;
 
@@ -23,20 +30,20 @@ namespace MiniProjectGuestList
                 if (validPeople == false)
                 {
                     Console.WriteLine("The value you entered for People is invalid.");
-                } else if (people < 0)
+                }
+                else if (people < 0)
                 {
                     Console.WriteLine("The amount of people can't be a negative number");
                     validPeople = false;
                 }
             } while (validPeople == false);
 
-            return (name, people);
-            
+            return people;
         }
 
         public static bool CheckForGuest()
         {
-            bool output = false; // return false by default
+            bool output = true; // return true by default
             bool validAnswer = false;
             do
             {
@@ -46,17 +53,36 @@ namespace MiniProjectGuestList
                 {
                     validAnswer = true;
                     output = true;
-                } else if (optionAnswer.ToLower() == "no") {
+                }
+                else if (optionAnswer.ToLower() == "no")
+                {
                     validAnswer = true;
                     output = false;
-                } else if (optionAnswer != "yes" && optionAnswer != "no")
+                }
+                else if (optionAnswer != "yes" && optionAnswer != "no")
                 {
                     validAnswer = false;
                 }
             } while (validAnswer == false);
 
             return output;
-        } 
+        }
+
+        public static Dictionary<string, int> GetTotalGuests()
+        {
+            Dictionary<string, int> guestList = new Dictionary<string, int>();
+            bool running = true;
+            do
+            {
+                string partyName = GetPartyName();
+                int partyAmount = GetTotalPeople();
+
+                guestList.Add(partyName, partyAmount);
+                running = CheckForGuest();
+            } while (running == true);
+
+            return guestList;
+        }
 
         public static void PrintGuestList(Dictionary<string, int> guestList)
         {
