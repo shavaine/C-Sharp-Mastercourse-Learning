@@ -32,5 +32,13 @@ namespace BattleshipLite
 
             } while (model.ShipLocations.Count < 5);
         }
+
+        public static string AskForShot()
+        {
+            Console.Write("Please enter your shot selection: ");
+            string output = Console.ReadLine();
+
+            return output;
+        }
     }
 }
