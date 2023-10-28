@@ -24,7 +24,18 @@ namespace BattleshipLite
                 Console.Write($"Where do you want to place ship number {model.ShipLocations.Count + 1}: ");
                 string location = Console.ReadLine();
 
-                bool isValidLocation = GameLogic.PlaceShip(model, location);
+                bool isValidLocation = false;
+
+                try
+                {
+                    isValidLocation = GameLogic.PlaceShip(model, location);
+                }
+                catch (Exception ex)
+                {
+
+                    Console.WriteLine($"Error: {ex.Message}");
+                }
+
                 if (isValidLocation == false)
                 {
                     Console.WriteLine("That was not a valid location. Please try again.");
@@ -33,9 +44,9 @@ namespace BattleshipLite
             } while (model.ShipLocations.Count < 5);
         }
 
-        public static string AskForShot()
+        public static string AskForShot(PlayerInfoModel player)
         {
-            Console.Write("Please enter your shot selection: ");
+            Console.Write($"{player.UserName}, Please enter your shot selection: ");
             string output = Console.ReadLine();
 
             return output;

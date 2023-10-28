@@ -12,7 +12,7 @@ namespace BattleshipLite
     {
         public static PlayerInfoModel CreatePlayer(string playerTitle)
         {
-            PlayerInfoModel output =  new PlayerInfoModel();
+            PlayerInfoModel output = new PlayerInfoModel();
 
             Console.WriteLine($"Player information for {playerTitle}");
 
@@ -45,20 +45,22 @@ namespace BattleshipLite
                 if (gridSpot.Status == GridSpotStatus.Empty)
                 {
                     Console.Write($" {gridSpot.SpotLetter}{gridSpot.SpotNumber} ");
-                } 
+                }
                 else if (gridSpot.Status == GridSpotStatus.Hit)
                 {
-                    Console.Write(" X ");
+                    Console.Write(" X  ");
                 }
                 else if (gridSpot.Status == GridSpotStatus.Miss)
                 {
-                    Console.Write(" O ");
+                    Console.Write(" O  ");
                 }
                 else
                 {
-                    Console.Write(" ? ");
+                    Console.Write(" ?  ");
                 }
             }
+            Console.WriteLine();
+            Console.WriteLine();
         }
 
         public static void RecordPlayerShot(PlayerInfoModel activePlayer, PlayerInfoModel opponent)
@@ -68,11 +70,20 @@ namespace BattleshipLite
             int column = 0;
             do
             {
-                string shot = RequestData.AskForShot();
-                (row, column) = GameLogic.SplitShotIntoRowAndColumn(shot);
-                isValidShot = GameLogic.ValidateShot(activePlayer, row, column);
+                string shot = RequestData.AskForShot(activePlayer);
+                try
+                {
+                    (row, column) = GameLogic.SplitShotIntoRowAndColumn(shot);
+                    isValidShot = GameLogic.ValidateShot(activePlayer, row, column);
+                }
+                catch (Exception ex)
+                {
 
-                if(isValidShot == false)
+                    Console.WriteLine($"Error: {ex.Message}");
+                    isValidShot = false;
+                }
+
+                if (isValidShot == false)
                 {
                     Console.WriteLine("Invalid Shot Location. Please try again.");
                 }
@@ -81,6 +92,22 @@ namespace BattleshipLite
             bool isAHit = GameLogic.IdentifyShotResult(opponent, row, column);
 
             GameLogic.MarkShotResult(activePlayer, row, column, isAHit);
+
+            DisplayShotResults(row, column, isAHit);
+
+        }
+
+        private static void DisplayShotResults(string row, int column, bool isAHit)
+        {
+            if (isAHit)
+            {
+                Console.WriteLine($"{row}{column} is a Hit!");
+            }
+            else
+            {
+                Console.WriteLine($"{row}{column} is a miss.");
+            }
+            Console.WriteLine();
         }
 
         public static void IdentifyWinner(PlayerInfoModel winner)
