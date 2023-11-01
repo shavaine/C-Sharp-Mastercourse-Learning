@@ -75,11 +75,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Lessons\Inter
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExtensionMethods", "ExtensionMethods", "{CE2E8143-4B62-4907-AF0B-F2695C1CA820}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionMethods", "Lessons\ExtensionMethods\ExtensionMethods.csproj", "{60A2695E-ECA5-49E6-AD92-6AAB3A4DD098}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtensionMethods", "Lessons\ExtensionMethods\ExtensionMethods.csproj", "{60A2695E-ECA5-49E6-AD92-6AAB3A4DD098}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MiniProjectExtensionMethods", "MiniProjectExtensionMethods", "{6520BFDE-8745-4BE1-A379-E3FDF0C5F54D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniProjectExtensionMethods", "Practice\MiniProjectExtensionMethods\MiniProjectExtensionMethods.csproj", "{A0991927-C51B-4365-AB04-8E5DC75A0F4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniProjectExtensionMethods", "Practice\MiniProjectExtensionMethods\MiniProjectExtensionMethods.csproj", "{A0991927-C51B-4365-AB04-8E5DC75A0F4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generics", "Generics", "{4B724088-D452-4C2E-8814-105B98420648}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics", "Lessons\Generics\Generics.csproj", "{A6E2EE6A-F15B-49F8-99A8-8946F723E9A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -195,6 +199,10 @@ Global
 		{A0991927-C51B-4365-AB04-8E5DC75A0F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0991927-C51B-4365-AB04-8E5DC75A0F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0991927-C51B-4365-AB04-8E5DC75A0F4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6E2EE6A-F15B-49F8-99A8-8946F723E9A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6E2EE6A-F15B-49F8-99A8-8946F723E9A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6E2EE6A-F15B-49F8-99A8-8946F723E9A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6E2EE6A-F15B-49F8-99A8-8946F723E9A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -236,6 +244,8 @@ Global
 		{60A2695E-ECA5-49E6-AD92-6AAB3A4DD098} = {CE2E8143-4B62-4907-AF0B-F2695C1CA820}
 		{6520BFDE-8745-4BE1-A379-E3FDF0C5F54D} = {4DD71F85-8025-43FB-832E-2C57B6BB8EEC}
 		{A0991927-C51B-4365-AB04-8E5DC75A0F4A} = {6520BFDE-8745-4BE1-A379-E3FDF0C5F54D}
+		{4B724088-D452-4C2E-8814-105B98420648} = {B1914C0A-A94E-497D-B251-FF1134955D55}
+		{A6E2EE6A-F15B-49F8-99A8-8946F723E9A5} = {4B724088-D452-4C2E-8814-105B98420648}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {650A024B-AD89-42D1-A151-5049439CA713}
