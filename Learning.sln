@@ -95,17 +95,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniProjectGenerics", "Prac
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClassLibraryDemo", "ClassLibraryDemo", "{F218EBAE-F0D1-4FE5-A31D-DE9CD5D751E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "Lessons\ClassLibrariesTwo\ConsoleUI\ConsoleUI.csproj", "{DF9856C2-FBBB-4DDB-A451-2BAB1B127955}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleUI", "Lessons\ClassLibrariesTwo\ConsoleUI\ConsoleUI.csproj", "{DF9856C2-FBBB-4DDB-A451-2BAB1B127955}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkLibrary", "FramworkLibrary\FrameworkLibrary.csproj", "{6734922D-00B0-471D-A7CE-F042573B8F9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreLibrary", "Lessons\ClassLibrariesTwo\CoreLibrary\CoreLibrary.csproj", "{3A2A746A-5B9F-4EDA-8481-C03967958C5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreLibrary", "Lessons\ClassLibrariesTwo\CoreLibrary\CoreLibrary.csproj", "{3A2A746A-5B9F-4EDA-8481-C03967958C5F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{DEDD1330-FB94-40E6-937A-D4EFB1714623}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestLibrary", "Lessons\UnitTestDemo\UnitTestLibrary\UnitTestLibrary.csproj", "{47E46C36-8AAA-447C-BBD2-E94C2D75EBB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestLibrary", "Lessons\UnitTestDemo\UnitTestLibrary\UnitTestLibrary.csproj", "{47E46C36-8AAA-447C-BBD2-E94C2D75EBB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestLibrary.Tests", "Lessons\UnitTestDemo\UnitTestLibrary.Tests\UnitTestLibrary.Tests.csproj", "{1ACB2194-6A6F-424B-B832-A82CE3D5A1A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestLibrary.Tests", "Lessons\UnitTestDemo\UnitTestLibrary.Tests\UnitTestLibrary.Tests.csproj", "{1ACB2194-6A6F-424B-B832-A82CE3D5A1A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeworkUnitTests", "HomeworkUnitTests", "{56039C46-6A50-44A5-8B23-CBECC5DCB1C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeworkUnitTests", "Practice\HomeworkUnitTests\HomeworkUnitTests.csproj", "{0D12CE45-6108-4598-8D10-7BBDE80F0EFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeworkUnitTest.tests", "Practice\HomeworkUnitTest.tests\HomeworkUnitTest.tests.csproj", "{E29910A2-B602-47A5-8F1A-80F5BCD62AEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -253,6 +259,14 @@ Global
 		{1ACB2194-6A6F-424B-B832-A82CE3D5A1A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ACB2194-6A6F-424B-B832-A82CE3D5A1A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1ACB2194-6A6F-424B-B832-A82CE3D5A1A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D12CE45-6108-4598-8D10-7BBDE80F0EFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D12CE45-6108-4598-8D10-7BBDE80F0EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D12CE45-6108-4598-8D10-7BBDE80F0EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D12CE45-6108-4598-8D10-7BBDE80F0EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E29910A2-B602-47A5-8F1A-80F5BCD62AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E29910A2-B602-47A5-8F1A-80F5BCD62AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E29910A2-B602-47A5-8F1A-80F5BCD62AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E29910A2-B602-47A5-8F1A-80F5BCD62AEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -307,6 +321,9 @@ Global
 		{DEDD1330-FB94-40E6-937A-D4EFB1714623} = {B1914C0A-A94E-497D-B251-FF1134955D55}
 		{47E46C36-8AAA-447C-BBD2-E94C2D75EBB2} = {DEDD1330-FB94-40E6-937A-D4EFB1714623}
 		{1ACB2194-6A6F-424B-B832-A82CE3D5A1A0} = {DEDD1330-FB94-40E6-937A-D4EFB1714623}
+		{56039C46-6A50-44A5-8B23-CBECC5DCB1C1} = {4DD71F85-8025-43FB-832E-2C57B6BB8EEC}
+		{0D12CE45-6108-4598-8D10-7BBDE80F0EFC} = {56039C46-6A50-44A5-8B23-CBECC5DCB1C1}
+		{E29910A2-B602-47A5-8F1A-80F5BCD62AEA} = {56039C46-6A50-44A5-8B23-CBECC5DCB1C1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {650A024B-AD89-42D1-A151-5049439CA713}
