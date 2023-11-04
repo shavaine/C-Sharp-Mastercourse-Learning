@@ -52,12 +52,6 @@
     <Compile Include="AddressEntry.Designer.cs">
       <DependentUpon>AddressEntry.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditAddress.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditAddress.Designer.cs">
-      <DependentUpon>EditAddress.cs</DependentUpon>
-    </Compile>
     <Compile Include="PersonEntry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,9 +62,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddressEntry.resx">
       <DependentUpon>AddressEntry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditAddress.resx">
-      <DependentUpon>EditAddress.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonEntry.resx">
       <DependentUpon>PersonEntry.cs</DependentUpon>
