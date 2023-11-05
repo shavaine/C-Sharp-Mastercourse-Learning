@@ -1,0 +1,48 @@
+﻿<Window x:Class="MiniProjectWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniProjectWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="1" Grid.Column="1">First Name</Label>
+        <TextBox Grid.Row="1" Grid.Column="2" Width="100" x:Name="firstNameText"/>
+
+        <Label Grid.Row="2" Grid.Column="1">Last Name</Label>
+        <TextBox Grid.Row="2" Grid.Column="2" Width="100" x:Name="lastNameText"/>
+
+        <Button Margin="0 10 0 10" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" x:Name="addAddressButton" Click="AddAddressButton_Click">Add Address</Button>
+        <ListBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" x:Name="addressesList">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="{Binding Path=Address}"/>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Path=City}" FontSize="11"/>
+                            <TextBlock Text=", " FontSize="11"/>
+                            <TextBlock Text="{Binding Path=Region}" FontSize="11"/>
+                            <TextBlock Text="  " FontSize="11"/>
+                            <TextBlock Text="{Binding Path=PostalCode}" FontSize="11"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>

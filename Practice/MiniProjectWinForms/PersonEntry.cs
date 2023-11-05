@@ -14,7 +14,6 @@ namespace MiniProjectWinForms
     public partial class PersonEntry : Form, ISaveAddress
     {
         BindingList<AddressModel> addresses = new BindingList<AddressModel>();
-        string curItem;
         public PersonEntry()
         {
             InitializeComponent();
