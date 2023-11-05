@@ -125,15 +125,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsDemoLibrary", "Prac
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFMessageWall", "Lessons\WPFMessageWall\WPFMessageWall.csproj", "{67A8741B-06A4-4D53-B1A8-121577DFF2F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniProjectWPF", "Practice\MiniProjectWPF\MiniProjectWPF.csproj", "{69D0836F-453A-4E3D-803D-F548BF2E66C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniProjectWPF", "Practice\MiniProjectWPF\MiniProjectWPF.csproj", "{69D0836F-453A-4E3D-803D-F548BF2E66C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniProjectWPFLibrary", "Practice\MiniProjectWPFLibrary\MiniProjectWPFLibrary.csproj", "{5F9DB752-00BD-48E1-8619-8AE55E472438}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniProjectWPFLibrary", "Practice\MiniProjectWPFLibrary\MiniProjectWPFLibrary.csproj", "{5F9DB752-00BD-48E1-8619-8AE55E472438}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPFDemo", "WPFDemo", "{0F44C93F-088C-4967-9F22-15284AA39A80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorMessageWall", "Lessons\ASPCoreDemo\RazorMessageWall\RazorMessageWall.csproj", "{5150A425-64C2-45CD-ADA7-B4D0A6B0A45B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorMessageWall", "Lessons\ASPCoreDemo\RazorMessageWall\RazorMessageWall.csproj", "{5150A425-64C2-45CD-ADA7-B4D0A6B0A45B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniProjectRazorPages", "Practice\MiniProjectRazorPages\MiniProjectRazorPages.csproj", "{FD592C24-D9FA-4A42-A77F-ABAA656DF6ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniProjectRazorPages", "Practice\MiniProjectRazorPages\MiniProjectRazorPages.csproj", "{FD592C24-D9FA-4A42-A77F-ABAA656DF6ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -392,6 +392,7 @@ Global
 		{5F9DB752-00BD-48E1-8619-8AE55E472438} = {0F44C93F-088C-4967-9F22-15284AA39A80}
 		{0F44C93F-088C-4967-9F22-15284AA39A80} = {4DD71F85-8025-43FB-832E-2C57B6BB8EEC}
 		{5150A425-64C2-45CD-ADA7-B4D0A6B0A45B} = {B1914C0A-A94E-497D-B251-FF1134955D55}
+		{FD592C24-D9FA-4A42-A77F-ABAA656DF6ED} = {4DD71F85-8025-43FB-832E-2C57B6BB8EEC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {650A024B-AD89-42D1-A151-5049439CA713}
