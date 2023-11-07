@@ -135,6 +135,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorMessageWall", "Lessons
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniProjectRazorPages", "Practice\MiniProjectRazorPages\MiniProjectRazorPages.csproj", "{FD592C24-D9FA-4A42-A77F-ABAA656DF6ED}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniProjectMVC", "..\MiniProjectMVCApp\MiniProjectMVC\MiniProjectMVC.csproj", "{9016361C-523E-402A-8D97-12DB67059401}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -325,6 +327,10 @@ Global
 		{FD592C24-D9FA-4A42-A77F-ABAA656DF6ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD592C24-D9FA-4A42-A77F-ABAA656DF6ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD592C24-D9FA-4A42-A77F-ABAA656DF6ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9016361C-523E-402A-8D97-12DB67059401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9016361C-523E-402A-8D97-12DB67059401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9016361C-523E-402A-8D97-12DB67059401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9016361C-523E-402A-8D97-12DB67059401}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -393,6 +399,7 @@ Global
 		{0F44C93F-088C-4967-9F22-15284AA39A80} = {4DD71F85-8025-43FB-832E-2C57B6BB8EEC}
 		{5150A425-64C2-45CD-ADA7-B4D0A6B0A45B} = {B1914C0A-A94E-497D-B251-FF1134955D55}
 		{FD592C24-D9FA-4A42-A77F-ABAA656DF6ED} = {4DD71F85-8025-43FB-832E-2C57B6BB8EEC}
+		{9016361C-523E-402A-8D97-12DB67059401} = {4DD71F85-8025-43FB-832E-2C57B6BB8EEC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {650A024B-AD89-42D1-A151-5049439CA713}
