@@ -1,0 +1,28 @@
+﻿<h3>Person</h3>
+
+<EditForm Model="person" OnValidSubmit="InvokeParentFunction">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <InputText id="firstName" class="form-control" placeHolder="First Name" @bind-Value="person.FirstName" />
+    <InputText id="lastName" class="form-control" placeHolder="Last Name" @bind-Value="person.LastName" />
+
+    <label for="isActive" class="form-label">Is Active:</label>
+    <InputCheckbox id="IsActive" class="form-check-inline"  @bind-Value="person.IsActive" />
+
+    <button type="submit" class="btn btn-primary d-block">Add Person</button>
+</EditForm>
+
+@code {
+    public PersonModel person = new();
+
+    [Parameter]
+    public Action<PersonModel>? SubmitForm { get; set; }
+
+    void InvokeParentFunction()
+    {
+        SubmitForm?.Invoke(person);
+        person = new();
+    }
+
+}

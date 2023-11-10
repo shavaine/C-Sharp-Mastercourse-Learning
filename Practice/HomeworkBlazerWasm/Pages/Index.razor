@@ -1,0 +1,45 @@
+﻿@page "/"
+
+
+<PageTitle>Home</PageTitle>
+
+<h1>People and Address</h1>
+<Person SubmitForm="@SubmitPerson" />
+<Address SubmitForm="@SubmitAddress" />
+
+<h2>People:</h2>
+<ul>
+    @foreach (var person in people)
+    {
+        <li>@person.FirstName - @person.LastName - @person.IsActive</li>
+    }
+</ul>
+
+
+<h2>Addresses:</h2>
+<ul>
+    @foreach (var address in addresses)
+    {
+        <li>@address.Address - @address.City - @address.Region</li>
+    }
+</ul>
+
+@code
+{
+    List<PersonModel> people = new();
+    List<AddressModel> addresses = new();
+
+    public void SubmitPerson(PersonModel person)
+    {
+        people.Add(person);
+        StateHasChanged();
+    }
+
+    public void SubmitAddress(AddressModel address)
+    {
+        addresses.Add(address);
+        StateHasChanged();
+    }
+}
+
+

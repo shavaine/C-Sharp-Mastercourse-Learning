@@ -1,0 +1,28 @@
+﻿<h3>Address</h3>
+
+<EditForm Model="address" OnValidSubmit="InvokeParentFunction">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <InputText id="address" class="form-control" placeHolder="Address" @bind-Value="address.Address" />
+    <InputText id="city" class="form-control" placeHolder="City" @bind-Value="address.City" />
+    <InputText id="region" class="form-control" placeHolder="Region" @bind-Value="address.Region" />
+    <InputText id="postalcode" class="form-control" placeHolder="Postal Code" @bind-Value="address.PostalCode" />
+
+    <button type="submit" class="btn btn-primary">Add Address</button>
+</EditForm>
+
+@code {
+    private AddressModel address = new();
+
+    [Parameter]
+    public Action<AddressModel>? SubmitForm { get; set; }
+
+    void InvokeParentFunction()
+    {
+        SubmitForm?.Invoke(address);
+        address = new();
+    }
+
+    
+}
