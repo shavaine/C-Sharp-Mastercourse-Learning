@@ -1,0 +1,35 @@
+﻿@page "/Person"
+
+<h3>Person</h3>
+
+<EditForm Model="person" OnValidSubmit="OnSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <InputText id="firstName" placeholder="First Name" @bind-Value="person.FirstName" class="form-control mb-4" />
+    <InputText id="lastName" placeholder="Last Name" @bind-Value="person.LastName" class="form-control mb-4" />
+
+    <label for="isActive" class="form-label">@nameof(person.IsActive)</label>
+    <InputCheckbox id="isActive" @bind-Value="person.IsActive" class="form-check-inline mb-4" />
+
+    <button type="submit" class="btn btn-primary d-block mb-4">Confirm Current User</button>
+</EditForm>
+
+<h4>Current User</h4>
+<p>First Name: @currentUser.FirstName</p>
+<p>Last Name: @currentUser.LastName</p>
+<p>Status: @currentUser.IsActive</p>
+
+@code {
+    private PersonModel person = new();
+    private PersonModel currentUser = new();
+
+    private void OnSubmit()
+    {
+        currentUser.FirstName = person.FirstName;
+        currentUser.LastName = person.LastName;
+        currentUser.IsActive = person.IsActive;
+
+        person = new();
+    }
+}
